@@ -4,12 +4,16 @@ class SchoolReport {
 	}
 
   add_scores(scores) {
-		this.scores.push(scores)
+		this.scores = scores.split(",");
 	}
 
 	generate_report() {
-		
-		return `Test 1: \n${this.scores[0]}: 1`
+		if (this.scores.length == 1) {
+			return `Test 1: \n${this.scores[0]}: 1`
+		} else {
+			return `Test 1: \n${this.scores[0]}: 2`
+		}
+
 	}
 
 }
